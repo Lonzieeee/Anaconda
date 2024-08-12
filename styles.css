@@ -1483,16 +1483,16 @@ width: 100%;
 
 .three-things{
   width: 90%;
-  padding-bottom:185px;
+  padding-bottom:158px;
   display: flex;
   flex-direction: column;
   gap: 15px;
   box-sizing: border-box;
 }
 .grade{
-  width: 80%;
+  width: 90%;
   box-sizing: border-box;
-  margin-left: 18%;
+  /* margin-left: 18%; */
  
 }
 .infrastrucure{

@@ -1,0 +1,1808 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --green: #2a9848;
+  --hoverblue: #3824cb;
+  --black: #0a1116;
+  --hoverpurple: #4b39d4;
+  --buttonpurple: #543ef7;
+  --white: #fff;
+}
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: all 0.2s linear;
+}
+body {
+ 
+  background-color:#fff;
+
+  overflow-x: hidden;
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: whitesmoke;
+  padding-left: 30px;
+
+  gap: 10%;
+  position: fixed;
+
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+
+  transition: background-color 0.3s, box-shadow 0.3s;
+  padding: 20px 0;
+  
+}
+.hamburger-menu {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger-menu .bar {
+  width: 25px;
+  height: 3px;
+  background-color: black;
+  margin: 4px 0;
+}
+.buttons{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-right: 60px;
+
+}
+.free-download{
+  font-family: 'inter';
+  font-size: 14px;
+  line-height: 14px;
+  color: var(--green);
+  font-weight: bold;
+}
+.hover-content > div {
+  flex: 1 1 25%;
+  /* padding: 10px; */
+  padding-left: 20px;
+  margin: 0;
+}
+
+.navbar {
+  display: flex;
+  gap: 10px;
+  position: relative;
+ 
+  margin-right: 80px;
+
+}
+nav a {
+  color: var(--black);
+  font-family: "inter", sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 16px;
+  position: relative;
+}
+.navbar a {
+  position: relative;
+  display: inline-block;
+}
+.hover-content {
+  display: none;
+  position: fixed;
+  top: 60px;
+  left: 0;
+
+  background: #fff;
+  padding: 20px;
+  z-index: 999;
+  width: 100vw;
+  box-shadow: 0 2px 4px (0, 0, 0, 0.1);
+  /* transition: transform 0.3s ease; */
+  gap: 5px;
+}
+.navbar a:hover .hover-content {
+  display: flex;
+  flex-wrap: wrap;
+}
+.nav-link {
+  position: relative;
+  display: block;
+}
+
+.anacondaHub,
+.Services-learning,
+.pricing,
+.source,
+.build,
+.deploy {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+}
+.anacondaHub h2,
+.Services-learning h2,
+.pricing h2,
+.source h2,
+.build h2,
+.deploy h2 {
+  font-family: "inter";
+  font-size: 16px;
+  line-height: 16px;
+  margin-bottom: 10%;
+  margin-top: 5%;
+}
+.more {
+  display: flex;
+  flex-direction: column;
+  gap: 5%;
+  flex-wrap: wrap;
+}
+
+.more h5,
+.Services-learning h5,
+.pricing h5,
+.source h5,
+.build h5,
+.deploy h5 {
+  font-family: "inter";
+  font-size: 14px;
+  line-height: 22.4px;
+  color: var(--black);
+  margin-bottom: 2%;
+}
+.more p,
+.pricing p,
+.source p,
+.build p,
+.deploy p {
+  font-family: "inter";
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 250;
+  margin-bottom: 5%;
+}
+.distribution,
+.cloud-suite,
+.workbench,
+.securityManager,
+.navigator,
+.notebooks,
+.premises,
+.under-services h5,
+.plansPricing,
+.source h5,
+.build h5,
+.deploy h5 {
+  margin-bottom: 5%;
+  /* flex: 1 1 calc(50% - 10px); */
+  border-left: 1px solid rgb(192, 187, 187);
+
+  padding-left: 10px;
+  transition: border-left 0.3s;
+}
+.distribution:hover,
+.cloud-suite:hover,
+.workbench:hover,
+.securityManager:hover,
+.navigator:hover,
+.notebooks:hover,
+.premises:hover,
+.under-services h5:hover,
+.plansPricing:hover,
+.source h5:hover,
+.build h5:hover,
+.deploy h5:hover {
+  border-left: 2px solid #0b892d;
+}
+
+.btn {
+  border: 0;
+  margin-top: 10px;
+  display: inline-block;
+  padding: 12px 8px;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: bold;
+  font-family: "inter", sans-serif;
+  letter-spacing: 0.2px;
+  border-radius: 5%;
+  color: var(--white);
+  cursor: pointer;
+  background: var(--buttonpurple);
+}
+.btn:hover {
+  background: var(--hoverpurple);
+}
+.signIn {
+  border: 1px solid var(--green);
+  margin-top: 10px;
+  display: inline-block;
+  padding: 12px 8px;
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: bold;
+  font-family: "inter", sans-serif;
+  letter-spacing: 0.2px;
+  border-radius: 5%;
+  color: var(--green);
+  cursor: pointer;
+  background: none;
+}
+/* THE OS FOR AI */
+.os{
+  /* background-color: #F9FCF7; */
+}
+
+.osHeading {
+  align-items: center;
+  text-align: center;
+  margin-top: 10%;
+
+  justify-content: center;
+}
+.disclosures {
+  align-items: center;
+  text-align: center;
+  margin-top: 2%;
+}
+.osHeading h1 {
+  font-size: 64px;
+  line-height: 70.4px;
+  color: var(--black);
+  font-weight: 500;
+}
+.osHeading p {
+  font-size: 20px;
+  line-height: 30px;
+  color: var(--black);
+  margin-top: 2%;
+}
+.numbers {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  margin-top: 2%;
+}
+.disclosureButton1 {
+  padding: 10px 14px;
+  color: var(--black);
+  background: rgb(6, 200, 6);
+  border: 0;
+  border-radius: 3%;
+  font-size: 16px;
+  line-height: 25.6px;
+  font-weight: 450;
+}
+.disclosureButton1:hover {
+  cursor: pointer;
+  background-color: #fff;
+  color: #0b892d;
+}
+.disclosureButton2 {
+  padding: 10px 14px;
+  color: #fff;
+  background-color: var(--buttonpurple);
+  font-size: 16px;
+  line-height: 25.6px;
+  font-weight: 450;
+  border: 0;
+  border-radius: 3%;
+}
+.disclosureButton2:hover {
+  cursor: pointer;
+  background: var(--hoverblue);
+}
+.verticalLine {
+  width: 1px;
+  height: 140px;
+  background-color: #cccccc;
+  margin: 0 10px;
+  display: inline-block;
+}
+.firstNumbers {
+  padding: 0 7%;
+}
+
+/* SECTION WITH MOVING IMAGES */
+
+.movingImages {
+  /* align-items: center; */
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  background-color: #fff;
+  /* margin-top: 2%;
+    padding: 3% 0; */
+  width: 100%;
+}
+.movingImages h1 {
+  font-size: 36px;
+  line-height: 43.2px;
+  color: var(--black);
+  font-weight: 450;
+  margin-top: 2%;
+}
+.adverts {
+  display: flex;
+  gap: 10%;
+
+  white-space: nowrap;
+  animation: scrollHorizontal 50s linear infinite;
+}
+.adverts img {
+  margin: 0 10px;
+  /* height: 100px; */
+}
+@keyframes scrollHorizontal {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+
+/* TOOLS FOR THE COMPLETE AI CYCLE */
+.AI-cycle{
+  background-color: #EFF2F5;
+  padding: 10px;
+  width: 100%;
+ 
+  
+
+}
+.AI-cycle h1{
+  align-items: center;
+  text-align: center;
+  padding: 3%;
+  font-family: 'inter';
+  font-size: 40px;
+  line-height: 48px;
+
+}
+.vertical p {
+  margin: 10px 0;
+}
+.vertical h4{
+  margin: 10px 0;
+  
+
+
+}
+.vertical{
+  position: relative;
+  display: inline-block;
+  padding-left: 20px;
+}
+.vertical .line{
+  position: absolute;
+  transform: translateX(-50%);
+  left:35%;
+  width:1px;
+  background-color:black;
+  
+ 
+}
+.vertical .above{
+  top:30px;
+  height: 25px;
+  /* padding: 5px 0; */
+}
+.vertical .between{
+  top:98px;
+  transform: translateY(-50%);
+  height: 25px;
+}
+.vertical .after{
+  top: 222px;
+  height: 30px;
+  transform: translateY(10px);
+}
+.vector{
+  width: 25px;
+  display: block;
+/* margin: 0 auto; */
+
+}
+.vertical p:first-of-type {
+  margin-top: 25px;  
+}
+.vertical h4{
+  padding-bottom: 12px;
+}
+
+.colouredSection{
+  display: flex;
+  gap: 2%;
+  align-items: flex-start;
+  justify-content: center;
+
+}
+.manyButtons{
+  padding: 10px 15px;
+  background-color: #fff;
+  border: 1px solid var(--black);
+  border-radius: 5px;
+  transition: background-color 0.7s ease , font-size 0.1s ease;
+  display: inline-block; 
+ 
+box-sizing: border-box;
+text-align: center;
+white-space: normal;
+/* overflow-wrap: break-word; */
+}
+.manyButtons:hover{
+  background: #5ADB86;
+  font-size: 0.7em;
+
+}
+.manyThings{
+  background-color: #E6FAED;
+  display: flex;
+  padding: 20px 40px;
+  /* margin-top: -8%; */
+  border:1px solid black;
+  border-radius: 5px;
+}
+.navigator{
+  display: flex;
+  gap:5%;
+}
+.navigator-software{
+  display: flex;
+  flex-direction: column;
+}
+.python {
+  display: flex;
+  gap: 5%;
+}
+.python p , .conda p {
+  font-family: 'inter';
+  font-size: 12px;
+  line-height: 18px;
+}
+.package-science{
+  display: flex;
+  margin-bottom: 20px;
+  gap: 10px;
+ 
+}
+.notebook-python{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  
+ 
+}
+.three-things{
+  background-color:  #E6FAED;
+  padding: 20px 30px;
+  border:1px solid black;
+  border-radius: 5px;
+  /* margin-top: -8%; */
+}
+.three-things h2{
+  font-family: 'inter';
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--black);
+  font-weight: 450;
+}
+.apiApplication{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+ 
+
+}
+.openSource{
+  background-color: #EFF2F5;
+  
+}
+.grade{
+  background-color: #E6FAED;
+  padding: 20px;
+  border:1px solid black;
+ border-radius: 5px;
+  width: 77%;
+ 
+  margin-left: 16%;
+
+ 
+
+}
+
+.grade h5{
+  text-align: center;
+  font-family: 'inter';
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--black);
+}
+.grade p{
+  text-align: center;
+  font-family: 'inter';
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--black);
+}
+
+
+.nvidia{
+  width: 40px;
+  height: 40px;
+}
+.azure{
+  width: 30px;
+  height: 33px;
+}
+.excel{
+  width: 30px;
+  height: 29px;
+}
+.snowFlake{
+  width: 74px;
+  height: 19px;
+}
+.ibm{
+  width: 45px;
+  height: 40px;
+}
+.teradata{
+  width: 69px;
+  height: 19px;
+}
+.dominos{
+  width: 93px;
+  height: 40px;
+}
+.c3{
+  width: 61px;
+  height: 39px;
+}
+.infrastrucure{
+  display: flex;
+  gap:9%;
+  margin-left: 12%;
+  margin-top: 3%;
+  margin-bottom: 2%;
+  align-items: center;
+}
+.infrastrucure h2 , .partners h2{
+  font-family: 'inter';
+  font-size: 16px;
+  line-height: 24px;
+}
+.infrastrucure p{
+  font-family: 'inter';
+  font-size: 14px;
+  line-height: 21px;
+}
+hr{
+  color:  rgb(0, 0, 0);
+  padding: 8px;
+  width: 90%;
+ 
+  margin-left: 5%;
+}
+.partners{
+  display: flex;
+  gap:6%;
+ 
+  margin-left: 12%;
+  padding-bottom: 3%;
+  padding-top: 2%;
+  align-items: center;
+  
+  
+}
+
+/* INDUSTRY SPECIFIC AI SOLUTIONS */
+.fourArea {
+  background-color: #fff;
+}
+
+.industry {
+  align-items: center;
+  text-align: center;
+  margin-top: 2%;
+}
+.industry h1 {
+  font-size: 40px;
+  line-height: 48px;
+  font-weight: 550;
+  color: var(--black);
+  margin-top: 2%;
+  font-family: "poppins";
+}
+.fourSections {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  gap: 2%;
+  margin: 0 10%;
+}
+.financial,
+.public,
+.health,
+.manufacturing {
+  border: 1px solid #dddddd;
+  border-radius: 3%;
+  padding: 12px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  position: relative;
+  margin: 8% 0;
+}
+.financial img,
+.public img,
+.health img,
+.manufacturing img {
+  margin-bottom: 8%;
+  height: auto;
+  max-width: 100%;
+}
+.financial h3,
+.financial p,
+.financial a,
+.public h3,
+.public p,
+.public a,
+.health h3,
+.health p,
+.health a,
+.manufacturing h3,
+.manufacturing p,
+.manufacturing a {
+  width: 100%;
+  text-align: left;
+}
+.financial h3,
+.public h3,
+.health h3,
+.manufacturing h3 {
+  font-size: 20px;
+  line-height: 30px;
+  margin-bottom: 20px;
+}
+.financial p,
+.public p,
+.health p,
+.manufacturing p {
+  width: 200px;
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 20px;
+  font-family: "intel";
+}
+
+.fourImages {
+  width: 100px;
+  height: 100px;
+}
+.links {
+  color: var(--black);
+  font-size: 14px;
+  line-height: 22.4px;
+  font-weight: bold;
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+}
+
+/* LAPTOP SECTION */
+.sods {
+  width: 569px;
+  height: 356.36px;
+}
+.whitePaper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #EFF2F5;
+}
+.dataScience h4 {
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--black);
+  font-weight: 300;
+  font-family: "inter";
+  margin-bottom: 3%;
+}
+.dataScience h3 {
+  font-size: 24px;
+  line-height: 28.8px;
+  color: var(--black);
+  font-weight: 450;
+  font-family: "poppins";
+  margin-bottom: 3%;
+}
+.dataScience p {
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--black);
+  width: 550px;
+  font-family: "intel";
+  margin-bottom: 8%;
+}
+.getReport {
+  color: var(--black);
+  font-size: 14px;
+  line-height: 22.4px;
+  font-weight: bold;
+  font-family: "inter";
+}
+
+/* NEWS, TOOLS AND RESOURCES */
+.tools{
+  background-color: #fff;
+}
+.news {
+  align-items: center;
+  text-align: center;
+  margin-top: 2%;
+}
+.news h1 {
+  font-size: 40px;
+  line-height: 48px;
+  font-weight: 550;
+  color: var(--black);
+  margin-top: 2%;
+  font-family: "poppins";
+  margin-top: 3%;
+}
+.threeSections {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  gap: 2%;
+  margin: 0 10%;
+}
+.insights,
+.docs,
+.practitioners {
+  border: 1px solid #dddddd;
+  border-radius: 3%;
+  padding: 15px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  box-sizing: border-box;
+  position: relative;
+  margin: 8% 0;
+}
+.insights img,
+.docs img,
+.practitioners img {
+  /* margin-bottom: 8%;
+  height: auto;
+  max-width: 100%; */
+  width: 303.06px;
+  height: 167.06px;
+}
+.insights a,
+.docs a,
+.practitioners a {
+  color: var(--black);
+  font-size: 14px;
+  line-height: 22.4px;
+  font-weight: bold;
+  font-family: "inter";
+  margin: 12px 0;
+  text-align: left;
+  display: block;
+}
+/* READY TO GET STARTED */
+.secondLast {
+  background-color: #15222f;
+  padding: 5%;
+}
+.secondLast h1 {
+  text-align: center;
+  font-family: "poppins";
+  color: #fff;
+  font-size: 40px;
+  line-height: 48px;
+}
+.twoButtons {
+  display: flex;
+  justify-content: center;
+  gap: 3%;
+  margin-top: 3%;
+}
+.user {
+  border: 1px solid #fff;
+  background: none;
+  padding: 10px 20px;
+  font-family: "inter";
+  font-size: 16px;
+  line-height: 25.6px;
+  color: #fff;
+}
+.user i {
+  margin-left: 12px;
+}
+.user:hover {
+  background: #000;
+  cursor: pointer;
+}
+.sales {
+  padding: 10px 14px;
+  color: var(--black);
+  background: rgb(6, 200, 6);
+  border: 0;
+  border-radius: 3%;
+  font-size: 16px;
+  line-height: 25.6px;
+  font-weight: bold;
+  font-family: "inter";
+}
+.sales:hover {
+  cursor: pointer;
+  background-color: #fff;
+  color: #0b892d;
+}
+
+/* FOOTER SECTION */
+footer {
+  background: #fff;
+  display: flex;
+  padding: 5% 10%;
+  gap: 18%;
+}
+
+footer .otherSections .list a {
+  white-space: nowrap;
+  font-family: "inter";
+  font-size: 14px;
+  line-height: 21px;
+  color: var(--black);
+  margin-bottom: 5%;
+}
+.anaconda img {
+  width: 148px;
+  height: 50px;
+}
+.mediaIcons img {
+  width: 21px;
+  height: 20px;
+  opacity: 0.5;
+}
+
+.twitter,
+.discord {
+  width: 25px;
+  height: 20px;
+}
+.imageSection {
+  display: flex;
+  flex-direction: column;
+  gap: 10%;
+}
+.mediaIcons {
+  display: flex;
+  gap: 15%;
+}
+
+.otherSections {
+  display: flex;
+  flex-direction: row;
+  gap: 15%;
+  justify-content: space-between;
+}
+.list {
+  display: flex;
+  flex-direction: column;
+}
+footer h5 {
+  margin-bottom: 10%;
+  font-family: "inter";
+  font-size: 14px;
+  line-height: 21px;
+  color: var(--black);
+}
+.lastFooter {
+  margin-top: -30px;
+  background-color: #fff;
+  display: flex;
+  gap: 10%;
+  padding: 0 10%;
+}
+.other {
+  display: flex;
+  gap: 5%;
+}
+
+.rights p {
+  font-family: "inter";
+  font-size: 12px;
+  line-height: 18px;
+}
+.other a {
+  font-family: "inter";
+  font-size: 12px;
+  line-height: 18px;
+  white-space: nowrap;
+  color: var(--black);
+}
+
+
+
+
+/*     MEDIA QUERIES */
+
+@media (max-width: 600px) {
+ 
+  
+  .navbar {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    padding: 5px 10px;
+  }
+  
+  .navbar.active {
+    display: flex;
+  }
+  
+  .header {
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding: 5px 0;
+    margin-bottom: 20px;
+    /* background-color: #000; */
+    
+  }
+
+  
+  .buttons .btn , .buttons .free-download{
+    /* flex-direction: row;
+    margin-right: 0; */
+    display: none;
+   
+
+  }
+  nav a {
+    font-size: 14px;
+    line-height: 14px;
+
+  }
+  .btn , .signIn{
+    width: 100%;
+    text-align: center;
+  }
+
+
+  /* THE OS FOR AI */
+  .osHeading{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .osHeading h1{
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 50px;
+    margin-top: 20%;
+    text-align: center;
+  }
+  .osHeading p{
+    font-size: 18px;
+    line-height: 28px;
+    margin-top: 5%;
+    text-align: center;
+  }
+.numbers{
+  
+  flex-direction: column;
+  
+}
+.verticalLine{
+ display: none;
+}
+.firstNumbers{
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 6%;
+}
+.firstNumbers p{
+  font-size: 15px;
+  white-space: nowrap;
+  text-align: center;
+}
+.disclosureButtonContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap:10px;
+
+}
+.disclosureButton1 , .disclosureButton2{
+  font-size: 14px;
+  line-height: 22px;
+  padding: 12px 20px;
+  display: block;
+  width: 90%;
+  margin: 0;
+
+}
+/* SECTION WITH MOVING IMAGES */
+.movingImages h1{
+  font-size: 24px;
+  line-height: 30px;
+  margin-top: 5%;
+
+}
+.adverts{
+  gap: 5%;
+  animation: scrollHorizontal 30s linear infinite;
+}
+.adverts img{
+  margin:  0 5px;
+  width: 80px;
+}
+
+/* TOOLS FOR THE COMPLETE AI CYCLE */
+.AI-cycle{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 10px;
+}
+.AI-cycle h1{
+  font-size: 24px;
+  line-height: 30px;
+  padding: 5%;
+  text-align: center;
+
+}
+.vertical {
+display: none;
+}
+
+.colouredSection{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+ .grade{
+  padding: 15px;
+  width: 100%;
+  margin-left: 0;
+}
+.manyThings{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+ /* padding: 15px; */
+ /* box-sizing: border-box; */
+}
+.manyThings .manyButtons{
+  width: 100%;
+  display: block;
+  padding: 12px;
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 16px;
+}
+ .package-science , .notebook-python{
+  flex-direction: column;
+  display: flex;
+  gap: 10px;
+}
+.grade{
+  gap: 10px;
+  width: 90%;
+  margin: 20px auto;
+  
+}
+.three-things{
+  display: none;
+}
+.infrastrucure , .partners{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  border: 1px solid #000;
+  border-radius: 8px;
+  /* width: calc(50% - 10px); */
+  width: 90%;
+  padding: 15px;
+  box-sizing: border-box; 
+  margin: 0 auto 10px; 
+  margin-top: 20px;
+}
+
+/* INDUSTRY SPECIFIC AI SOLUTIONS */
+.industry{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+.industry h1 {
+  font-size: 24px;
+  line-height: 30px;
+  margin-top: 5%;
+  text-align: center;
+}
+.fourSections {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 10px;
+  margin: 0;
+  align-items: center;
+  box-sizing: border-box;
+}
+.financial,
+.public,
+.health,
+.manufacturing {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+
+  padding: 15px;
+  text-align: center;
+  width: 90%;
+  margin: 5% 0;
+}
+.financial img,
+.public img,
+.health img,
+.manufacturing img {
+  
+  max-width: 80%;
+  height: auto;
+}
+
+.financial p,
+.public p,
+.health p,
+.manufacturing p {
+  width: 100%;
+  font-size: 14px;
+  line-height: 20px;
+  
+}
+
+/* LAPTOP SECTION */
+.sods {
+  width: 100%;
+  height: auto;
+}
+
+.dataScience h4 {
+  font-size: 10px;
+  line-height: 15px;
+  
+  
+  margin-bottom: 2%;
+}
+.dataScience h3 {
+  font-size: 20px;
+  line-height: 24px;
+  
+  margin-bottom: 2%;
+}
+.dataScience p {
+  font-size: 14px;
+  line-height: 20px;
+
+  width: 100%;
+
+  margin-bottom: 5%;
+}
+.getReport {
+ 
+  font-size: 12px;
+  line-height: 18px;
+  
+}
+.whitePaper{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* NEWS, TOOLS AND RESOURCES */
+.news{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+.news h1 {
+  font-size: 24px;
+  line-height: 30px;
+  margin-top: 2%;
+  text-align: center;
+  width: 100%;
+  
+}
+.threeSections {
+  display: flex;
+ flex-direction: column;
+ gap: 10px;
+ width: 100%;
+ align-items: center;
+
+
+ margin: 0;
+ box-sizing: border-box;
+}
+.insights,
+.docs,
+.practitioners {
+ width: 100%;
+ margin: 4% 0;
+}
+.insights img,
+.docs img,
+.practitioners img {
+  
+  width: 100%;
+  height: auto;
+}
+.insights a,
+.docs a,
+.practitioners a {
+  
+  font-size: 12px;
+  line-height: 18px;
+  margin: 8px 0;
+}
+
+
+
+/* READY TO GET STARTED */
+
+.secondLast h1 {
+ 
+  font-size: 24px;
+  line-height: 30px;
+}
+.twoButtons {
+  flex-direction: column;
+  gap: 10px;
+
+}
+.user , .sales {
+ width: 100%;
+ font-size: 14px;
+ line-height: 22.4px;
+ padding: 12px;
+}
+
+ 
+/* FOOTER SECTION */
+footer {
+  flex-direction: column;
+  padding: 5% 5%;
+  gap: 5%;
+}
+
+footer .otherSections {
+  flex-direction: column;
+  gap: 10px;
+}
+.anaconda img {
+  width: 100px;
+  height: auto;
+}
+.mediaIcons img {
+  width: 18px;
+  height: auto;
+ 
+}
+
+
+.imageSection {
+  
+  gap: 5%;
+}
+.mediaIcons {
+ 
+  gap: 10%;
+}
+
+
+.list a {
+  font-size: 12px;
+  line-height: 18px;
+}
+footer h5 {
+ font-size: 12px;
+ line-height: 18px;
+ margin-bottom: 5%;
+}
+.lastFooter {
+  flex-direction: column;
+  padding: 5% 0;
+  margin-top: 0;
+}
+.other {
+ flex-direction: column;
+  gap: 10%;
+}
+
+
+  }
+
+
+
+
+
+
+
+@media (min-width:601px) and (max-width: 900px){
+  .header{
+   
+  
+    padding:  10px 20px;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    position: relative;
+    gap: 10px;
+    width: 100%;
+    box-sizing: border-box;
+
+  }
+  .header img{
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-right: 20px;
+    /* max-width: 100px; */
+    height: auto;
+  }
+  
+ 
+  .navbar{
+    display: none;
+    
+   
+
+  }
+  .buttons{
+    
+    display: flex;
+    gap: 10px;
+    margin: 0;
+
+  }
+  /* THE OS FOR AI */
+
+  .osHeading h1{
+    font-size: 42px;
+    line-height: 48px;
+  }
+  .osHeading p{
+    font-size: 16px;
+    line-height: 24px;
+
+  }
+.numbers{
+
+  margin-top: 4%;
+}
+.verticalLine{
+ 
+  height: 80px;
+
+}
+
+.disclosureButton1 , .disclosureButton2{
+  font-size: 14px;
+  line-height: 22px;
+
+
+}
+/* SECTION WITH MOVING IMAGES */
+.movingImages h1{
+  font-size: 28px;
+  line-height: 34px;
+
+
+}
+.adverts{
+  gap: 5%;
+  animation: scrollHorizontal 40s linear infinite;
+}
+.adverts img{
+  margin:  0 6px;
+  width: 90px;
+}
+/* TOOLS FOR THE COMPLETE AI CYCLE */
+.AI-cycle{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 10px 20px;
+}
+.AI-cycle h1{
+  font-size: 28px;
+  line-height: 34px;
+
+
+}
+
+.colouredSection{
+  flex-direction: row;
+  gap: 4%;
+}
+ .grade{
+  padding: 12px;
+  width: 95%;
+  margin-left: 2.5%;
+}
+.manyThings{
+  display: flex;
+  flex-direction: column;
+  gap :15px;
+width: 100%;
+}
+.manyThings > div{
+  width: 100%;
+}
+
+
+.three-things{
+  width: 90%;
+  padding-bottom:185px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  box-sizing: border-box;
+}
+.grade{
+  width: 80%;
+  box-sizing: border-box;
+  margin-left: 18%;
+ 
+}
+.infrastrucure{
+ 
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 6%;
+  margin-left: 16%; 
+    margin-top: 2%; 
+    margin-bottom: 2%;
+    align-items: center;
+    
+    padding: 0 10px; 
+
+}
+.partners{
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 4%;
+  margin-left: 16%; 
+   padding-top: 2%; 
+    padding-bottom: 2%;
+    align-items: center;
+    
+    padding: 5px 10px; 
+
+
+}
+.nvidia{
+  width: 20px;
+  height: 20px;
+}
+.azure{
+  width: 20px;
+  height: 23px;
+}
+.excel{
+  width: 20px;
+  height: 19px;
+}
+.snowFlake{
+  width: 64px;
+  height: 9px;
+}
+.ibm{
+  width: 25px;
+  height: 20px;
+}
+.teradata{
+  width: 59px;
+  height: 9px;
+}
+.dominos{
+  width: 73px;
+  height: 20px;
+}
+.c3{
+  width: 41px;
+  height: 19px;
+}
+/* INDUSTRY SPECIFIC AI SOLUTIONS */
+.industry{
+  padding: 20px;
+  text-align: center;
+}
+.industry h1 {
+  font-size: 28px;
+  line-height: 34px;
+  margin:  0 0 20px;
+
+}
+.fourSections {
+  display: flex;
+  flex-wrap: wrap;
+  
+  gap: 15px;
+  justify-content: center;
+}
+.financial,
+.public,
+.health,
+.manufacturing {
+ 
+  padding: 8px;
+  text-align: center;
+  width: 48%;
+  margin: 4% 0;
+}
+.financial img,
+.public img,
+.health img,
+.manufacturing img {
+  
+  max-width: 85%;
+}
+
+.financial p,
+.public p,
+.health p,
+.manufacturing p {
+  width: auto;
+  font-size: 14px;
+  
+}
+
+/* THE LAPTOP SECTION */
+/* LAPTOP SECTION */
+.sods {
+  width: 100%;
+ max-width: 569px;
+  height:auto;
+  margin-bottom: 20px;
+}
+.whitePaper {
+
+  align-items: center;
+  justify-content: space-between;
+padding: 20px;
+gap: 20px;
+}
+.dataScience h4 {
+  font-size: 14px;
+  line-height: 20px;
+  
+  
+}
+.dataScience h3 {
+  font-size: 20px;
+  line-height: 28px;
+  
+}
+.dataScience p {
+  font-size: 14px;
+  line-height: 22px;
+ 
+  width: 100%;
+ margin-bottom: 5%;
+}
+.getReport {
+  color: var(--black);
+  font-size: 14px;
+  line-height: 22.4px;
+  font-weight: bold;
+  font-family: "inter";
+}
+
+/* NEWS, TOOLS AND RESOURCES */
+.tools{
+  background-color: #fff;
+}
+.news {
+  align-items: center;
+  text-align: center;
+  margin-top: 2%;
+}
+.news h1 {
+  font-size: 40px;
+  line-height: 48px;
+  font-weight: 550;
+  color: var(--black);
+  margin-top: 2%;
+  font-family: "poppins";
+  margin-top: 3%;
+}
+.threeSections {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  gap: 2%;
+  margin: 0 10%;
+}
+.insights,
+.docs,
+.practitioners {
+  border: 1px solid #dddddd;
+  border-radius: 3%;
+  padding: 15px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  box-sizing: border-box;
+  position: relative;
+  margin: 8% 0;
+}
+.insights img,
+.docs img,
+.practitioners img {
+  /* margin-bottom: 8%;
+  height: auto;
+  max-width: 100%; */
+  width: 303.06px;
+  height: 167.06px;
+}
+.insights a,
+.docs a,
+.practitioners a {
+  color: var(--black);
+  font-size: 14px;
+  line-height: 22.4px;
+  font-weight: bold;
+  font-family: "inter";
+  margin: 12px 0;
+  text-align: left;
+  display: block;
+}
+
+/* NEWS, TOOLS AND RESOURCES */
+
+.news h1 {
+  font-size: 30px;
+  line-height: 38px;
+  margin-top: 2%;
+  
+}
+.threeSections {
+ flex-direction: row;
+ margin: 0 4%;
+}
+.insights,
+.docs,
+.practitioners {
+ width: 100%;
+ margin: 6% 0;
+}
+.insights img,
+.docs img,
+.practitioners img {
+  
+  width: 100%;
+  height: auto;
+}
+.insights a,
+.docs a,
+.practitioners a {
+  
+  font-size: 12px;
+  line-height: 18px;
+  margin: 8px 0;
+}
+
+/* READY TO GET STARTED */
+
+.secondLast h1 {
+ 
+  font-size: 32px;
+  line-height: 40px;
+}
+.twoButtons {
+  
+  gap: 10px;
+
+}
+.user , .sales {
+ 
+ font-size: 14px;
+ line-height: 22px;
+ padding: 10px 16px;
+}
+
+ 
+/* FOOTER SECTION */
+footer {
+  flex-direction: column;
+  padding: 5% 7%;
+  gap: 10%;
+}
+
+ .otherSections {
+  flex-direction: column;
+  gap: 10%;
+}
+.anaconda img {
+  width: 120px;
+  height: auto;
+}
+.mediaIcons img {
+  width: 20px;
+  height: auto;
+ 
+}
+
+
+
+
+
+.list a {
+  font-size: 13px;
+  line-height: 20px;
+}
+footer h5 {
+ font-size: 13px;
+ line-height: 20px;
+ margin-bottom: 8%;
+}
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

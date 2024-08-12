@@ -1521,6 +1521,9 @@ width: 100%;
 
 
 }
+.vertical{
+  display: none;
+}
 .nvidia{
   width: 20px;
   height: 20px;

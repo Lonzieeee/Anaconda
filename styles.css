@@ -117,6 +117,10 @@ nav a {
   position: relative;
   display: block;
 }
+.nav-link:hover{
+  text-decoration: underline;
+  color: #0b892d;
+}
 
 .anacondaHub,
 .Services-learning,

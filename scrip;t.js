@@ -58,12 +58,7 @@ document.addEventListener("DOMContentLoaded", function(){
         }
         scroll();
 
-//         const hamburgerMenu = document.querySelector('.hamburger-menu');
-// const navbar = document.querySelector('.navbar');
 
-// hamburgerMenu.addEventListener('click', () => {
-//   navbar.classList.toggle('active');
-// });
 
 
 
@@ -87,6 +82,7 @@ buttons.forEach(button => {
         button.textContent = defaultText;
     });
 });
+// WHITE SLIDE EFFECT ON HOVER
 
 
     });
